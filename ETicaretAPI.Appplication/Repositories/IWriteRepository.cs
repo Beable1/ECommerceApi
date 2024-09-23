@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETicaretAPI.Appplication.Repositories
+namespace ETicaretAPI.Application.Repositories
 {
     public interface IWriteRepository<T>:IRepository<T> where T : BaseEntity
     {
@@ -15,6 +15,8 @@ namespace ETicaretAPI.Appplication.Repositories
 
         bool Remove(T entity);
         Task<bool> RemoveAsync(string id);
+
+        Task<int> SaveAsync();
 
     }
 }

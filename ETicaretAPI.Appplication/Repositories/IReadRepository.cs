@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETicaretAPI.Appplication.Repositories
+namespace ETicaretAPI.Application.Repositories
 {
     public interface IReadRepository<T> : IRepository<T> where T : BaseEntity
     {

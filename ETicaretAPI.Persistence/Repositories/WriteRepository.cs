@@ -1,4 +1,4 @@
-﻿using ETicaretAPI.Appplication.Repositories;
+﻿using ETicaretAPI.Application.Repositories;
 using ETicaretAPI.Domain.Entities.Common;
 using ETicaretAPI.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
@@ -51,5 +51,7 @@ namespace ETicaretAPI.Persistence.Repositories
             var entityEntry= Table.Update(entity);
             return entityEntry.State== EntityState.Modified;
         }
+
+        public async Task<int> SaveAsync() => await _context.SaveChangesAsync();
     }
 }

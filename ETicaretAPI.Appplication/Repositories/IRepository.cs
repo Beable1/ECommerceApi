@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETicaretAPI.Appplication.Repositories
+namespace ETicaretAPI.Application.Repositories
 {
     public interface IRepository<T>where T : BaseEntity
     {

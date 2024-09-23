@@ -1,4 +1,4 @@
-﻿using ETicaretAPI.Appplication.Repositories;
+﻿using ETicaretAPI.Application.Repositories;
 using ETicaretAPI.Domain.Entities.Common;
 using ETicaretAPI.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
