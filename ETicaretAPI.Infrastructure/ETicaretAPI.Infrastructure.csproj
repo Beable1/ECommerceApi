@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ETicaretAPI.Application\ETicaretAPI.Application.csproj" />
+    <ProjectReference Include="..\ETicaretAPI.Appplication\ETicaretAPI.Application.csproj" />
   </ItemGroup>
 
 </Project>

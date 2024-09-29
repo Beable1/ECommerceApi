@@ -18,11 +18,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ETicaretAPI.Application\ETicaretAPI.Application.csproj" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\ETicaretAPI.Appplication\ETicaretAPI.Application.csproj" />
   </ItemGroup>
 
 </Project>
