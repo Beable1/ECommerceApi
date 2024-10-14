@@ -16,14 +16,17 @@ namespace ETicaretAPI.Persistence
                 ConfigurationManager configurationManager = new();
                 try
                 {
-                    configurationManager.SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../ETicaretAPI.API"));
+                    configurationManager.SetBasePath(Path.Combine(Directory.GetCurrentDirectory()));
+                    Console.WriteLine("aaaaaaaaaaa"+ configurationManager.GetConnectionString("SqlConnection"));
+                    
+
                 }
                 catch (DirectoryNotFoundException ex)
                 {
                     Console.WriteLine("Directory not found: " + ex.Message);
                 }
 
-
+               
 
                 return configurationManager.GetConnectionString("SqlConnection");
             }

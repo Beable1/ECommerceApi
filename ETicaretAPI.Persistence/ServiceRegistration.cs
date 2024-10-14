@@ -1,4 +1,5 @@
-﻿using ETicaretAPI.Application.Repositories;
+﻿using ETicaretAPI.Application.Mappers;
+using ETicaretAPI.Application.Repositories;
 using ETicaretAPI.Persistence.Contexts;
 using ETicaretAPI.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -18,7 +19,8 @@ namespace ETicaretAPI.Persistence
         public static void AddPersistenceServices(this IServiceCollection services)
         {
             Console.WriteLine(Configuration.ConnectionString);
-            services.AddDbContext<AppDbContext>(options => options.UseNpgsql(Configuration.ConnectionString));
+            services.AddDbContext<AppDbContext>(options => options.UseNpgsql("UserID=postgres;Password=13579;Host=localhost;Port=5433;Database=ETicaretApiDb;"));
+            services.AddAutoMapper(typeof(MapProfile));
             services.AddScoped<ICustomerReadRepository,CustomerReadRepository>();
             services.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>();
             services.AddScoped<IProductReadRepository, ProductReadRepository>();
